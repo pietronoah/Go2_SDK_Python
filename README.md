@@ -10,8 +10,6 @@ source go2_sdk/bin/activate
 ```
 Execute the following commands in the terminal:
 ```bash
-cd ~
-sudo apt install python3-pip
 git clone https://github.com/pietronoah/Go2_SDK_Python.git
 cd Go2_SDK_Python
 pip3 install -e .
