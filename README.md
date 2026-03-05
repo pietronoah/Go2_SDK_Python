@@ -22,7 +22,7 @@ pip3 install -e .
 Before running, determine the network interface name that connects to your robot (this is required as the `interface_code` argument in the example). You can list interfaces with:
 
 ```bash
-ip -a
+ip a
 ```
 
 Two policies are available, one for trot and one for pronk gait. Choose the desired one in the `config.yaml`:
