@@ -41,7 +41,7 @@ scaling:
   actions: 1.0
 
 policy:
-  gait: pronk # set to 'trot' or 'pronk'
+  gait: trot # set to 'trot' or 'pronk'
   model_paths:
     trot: nn/trot.pt
     pronk: nn/pronk.pt
