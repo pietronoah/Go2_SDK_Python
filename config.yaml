@@ -1,0 +1,50 @@
+simulation:
+  timestep_simulation: 0.005 # 0.00125
+  #timestep_policy: 0.005
+  framerate: 60
+  duration: 7
+  framerate: 60
+
+robot:
+  default_joint_angles: [
+                -0.1,
+                0.8,
+                -1.5,
+                0.1,
+                0.8,
+                -1.5,
+                -0.1,
+                1.0,
+                -1.5,
+                0.1,
+                1.0,
+                -1.5,
+            ]
+  kp_custom: [25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25]
+  kd_custom: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  mu_vRange: [0.0, 0.3]
+  FsRange: [0.0, 2.5]
+  default_mid: [0.0, 0.9, -1.7]
+
+actions:
+  bounds:
+    low: -35.0
+    high: 35.0
+    special_high: 45.0
+
+scaling:
+  body_ang_vel: 1.0
+  commands: 1.0
+  gravity_body: 1.0
+  joint_angles: 1.0
+  joint_velocities: 1.0
+  actions: 1.0
+
+policy:
+  gait: trot # set to 'trot' or 'pronk'
+  model_paths:
+    trot: nn/trot.pt
+    pronk: nn/pronk.pt
+  periods:
+    trot: 0.5
+    pronk: 0.4
